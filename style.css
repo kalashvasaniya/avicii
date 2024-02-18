@@ -46,6 +46,20 @@
         animation: fade 5s;
     }
 
+    @keyframes fade2 {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fade2 {
+        animation: fade 14s;
+    }
+
 
 
     @keyframes toptobottom {
