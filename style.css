@@ -1,92 +1,128 @@
+/* Base styles */
 .hideSeven {
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-@media (min-width: 100px) {
+.showSeven {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
 
-    @keyframes lefttoright {
-        0% {
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
+/* Animation keyframes */
+@keyframes lefttoright {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
     }
-
-    .lefttoright {
-        animation: lefttoright 5s;
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
+}
 
-    @keyframes righttoleft {
-        0% {
-            transform: translateX(-100%);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
+@keyframes righttoleft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
     }
-
-    .righttoleft {
-        animation: righttoleft 5s;
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
+}
 
-    @keyframes fade {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
+@keyframes fade {
+    0% {
+        opacity: 0;
     }
-
-    .fade {
-        animation: fade 5s;
+    100% {
+        opacity: 1;
     }
+}
 
-    @keyframes fade2 {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
+@keyframes fade2 {
+    0% {
+        opacity: 0;
     }
-
-    .fade2 {
-        animation: fade 14s;
+    50% {
+        opacity: 0;
     }
-
-
-
-    @keyframes toptobottom {
-        0% {
-            transform: translateY(-100%);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
+    100% {
+        opacity: 1;
     }
+}
 
-    .toptobottom {
-        animation: toptobottom 5s;
+@keyframes toptobottom {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
     }
-
-    @keyframes bottomtotop {
-        0% {
-            transform: translateY(100%);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
+}
 
-    .bottomtotop {
-        animation: bottomtotop 5s;
+@keyframes bottomtotop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
     }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation classes */
+.lefttoright {
+    animation: lefttoright 1.5s ease-out forwards;
+}
+
+.righttoleft {
+    animation: righttoleft 1.5s ease-out forwards;
+}
+
+.fade {
+    animation: fade 1.5s ease-out forwards;
+}
+
+.fade2 {
+    animation: fade2 2s ease-out forwards;
+}
+
+.toptobottom {
+    animation: toptobottom 1.5s ease-out forwards;
+}
+
+.bottomtotop {
+    animation: bottomtotop 1.5s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .lefttoright, .righttoleft, .toptobottom, .bottomtotop {
+        animation-duration: 1s;
+    }
+    
+    .fade, .fade2 {
+        animation-duration: 1s;
+    }
+}
+
+/* Hover effects */
+.hover\:opacity-80:hover {
+    opacity: 0.8;
+}
+
+.transition-opacity {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Shadow effects */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }

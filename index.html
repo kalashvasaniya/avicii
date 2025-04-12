@@ -2,127 +2,128 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tribute to Avicii - Tim Bergling">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="/img/avicii.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Kalash Vasaniya | Avicii</title>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKSXYNMLD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-FJKSXYNMLD');
     </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/avicii.jpeg" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Kalash Vasaniya | Avicii</title>
 </head>
 
-<body class="bg-black">
-
+<body class="bg-black min-h-screen overflow-x-hidden">
+    <!-- Background Music -->
     <iframe class="hidden" width="560" height="315"
         src="https://www.youtube.com/embed/yV2HyFC_gwo?autoplay=1&mute=1&si=u2KeHfwTe3vgwFmt"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <div class="showSeven">
-        <div>
-            <div className='bg-black'>
-                <div class="flex justify-center items-center align-middle text-center h-screen">
-                    <p class="text-base text-white -mt-16">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 41 18.9" width="102"
-                            height="47" aria-hidden="true">
-                            <path d="M22.1 18.9V0H41L22.1 18.9zM18.9 0v18.9H0L18.9 0z"></path>
-                        </svg>
-                    </p>
-                </div>
-            </div>
+    <!-- Loading Screen -->
+    <div class="showSeven fixed inset-0 z-50">
+        <div class="flex justify-center items-center h-screen">
+            <p class="text-base text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 41 18.9" width="102"
+                    height="47" aria-hidden="true" class="animate-pulse">
+                    <path d="M22.1 18.9V0H41L22.1 18.9zM18.9 0v18.9H0L18.9 0z"></path>
+                </svg>
+            </p>
         </div>
     </div>
 
+    <!-- Main Content -->
     <div class="hideSeven">
-        <div class="md:block hidden">
-
-            <!-- name  -->
-            <div class="flex justify-center top-8 z-10 relative lefttoright">
-                <p class="text-base text-white">
-                    <button>
-                        <a href="https://avicii.com" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.3 18.9" width="78" height="18"
-                                fill="currentColor" aria-hidden="true">
-                                <path
-                                    d="M16.7.1 0 16.8v2.1h2.2L16.7 4.5v14.4h3.1V.1h-3.1zM73 .1h3.1V19H73zm6.2 0h3.1V19h-3.1zM44.9.1H48V19h-3.1zM26 .1h-3.1v18.8h4.4L41.8 4.5V.1L26 15.9V.1zm34.5 3A6.3 6.3 0 0 1 66.7 8h3.2a9.4 9.4 0 1 0 0 3.2h-3.3a6.3 6.3 0 1 1-6-8Z">
-                                </path>
-                            </svg>
-                        </a>
-                    </button>
-                </p>
-            </div>
-
-            <!-- logo  -->
-            <div class="relative top-[35rem] -right-[30rem] z-20 fade2">
-                <div className='bg-black'>
-                    <p class="text-base text-white">
-                        <button>
-                            <a href="https://kalashvasaniya.com" target="_blank">
-                                <svg class="animate-pulse" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 41 18.9"
-                                    width="41" height="19" aria-hidden="true">
-                                    <path d="M22.1 18.9V0H41L22.1 18.9zM18.9 0v18.9H0L18.9 0z"></path>
-                                </svg>
-                            </a>
-                        </button>
-                    </p>
+        <!-- Desktop View -->
+        <div class="hidden md:block">
+            <!-- Avicii Logo -->
+            <div class="fixed top-8 left-0 right-0 z-10">
+                <div class="flex justify-center">
+                    <a href="https://avicii.com" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.3 18.9" width="78" height="18"
+                            fill="currentColor" aria-hidden="true" class="text-white lefttoright">
+                            <path d="M16.7.1 0 16.8v2.1h2.2L16.7 4.5v14.4h3.1V.1h-3.1zM73 .1h3.1V19H73zm6.2 0h3.1V19h-3.1zM44.9.1H48V19h-3.1zM26 .1h-3.1v18.8h4.4L41.8 4.5V.1L26 15.9V.1zm34.5 3A6.3 6.3 0 0 1 66.7 8h3.2a9.4 9.4 0 1 0 0 3.2h-3.3a6.3 6.3 0 1 1-6-8Z"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
 
-            <!-- image  -->
-            <div class="absolute fade">
-                <img class="fixed" src="/img/tim.jpg" alt="Avicii">
+            <!-- Background Image -->
+            <div class="fixed inset-0 fade">
+                <img class="w-full h-full object-cover" src="/img/tim.jpg" alt="Avicii" loading="lazy">
             </div>
 
-            <!-- spotify  -->
-            <div class="relative top-48 -right-[50rem] z-20 max-w-[30rem] lefttoright">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1FyCb2G1zhBBNQ5lZq1XUi?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <!-- Spotify Player - Right Half Centered -->
+            <div class="fixed right-0 top-0 bottom-0 w-1/2 flex items-center justify-center z-20 fade2 px-12">
+                <div class="w-full max-w-xl">
+                    <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/playlist/1FyCb2G1zhBBNQ5lZq1XUi?utm_source=generator&theme=0" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"
+                        class="shadow-2xl backdrop-blur-sm bg-black/30"></iframe>
+                </div>
+            </div>
+
+            <!-- Personal Logo -->
+            <div class="fixed bottom-8 left-8 z-20 fade2">
+                <a href="https://kalashvasaniya.com" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                    <svg class="animate-pulse" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 41 18.9"
+                        width="41" height="19" aria-hidden="true" class="text-white">
+                        <path d="M22.1 18.9V0H41L22.1 18.9zM18.9 0v18.9H0L18.9 0z"></path>
+                    </svg>
+                </a>
             </div>
         </div>
 
+        <!-- Mobile View -->
         <div class="block md:hidden">
-
-            <!-- name  -->
-            <div class="flex justify-center top-8 z-10 relative toptobottom">
-                <p class="text-base text-white">
-                    <button>
-                        <a href="https://avicii.com" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.3 18.9" width="78" height="18"
-                                fill="currentColor" aria-hidden="true">
-                                <path
-                                    d="M16.7.1 0 16.8v2.1h2.2L16.7 4.5v14.4h3.1V.1h-3.1zM73 .1h3.1V19H73zm6.2 0h3.1V19h-3.1zM44.9.1H48V19h-3.1zM26 .1h-3.1v18.8h4.4L41.8 4.5V.1L26 15.9V.1zm34.5 3A6.3 6.3 0 0 1 66.7 8h3.2a9.4 9.4 0 1 0 0 3.2h-3.3a6.3 6.3 0 1 1-6-8Z">
-                                </path>
-                            </svg>
-                        </a>
-                    </button>
-                </p>
+            <!-- Avicii Logo -->
+            <div class="fixed top-8 left-0 right-0 z-10">
+                <div class="flex justify-center">
+                    <a href="https://avicii.com" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.3 18.9" width="78" height="18"
+                            fill="currentColor" aria-hidden="true" class="text-white toptobottom">
+                            <path d="M16.7.1 0 16.8v2.1h2.2L16.7 4.5v14.4h3.1V.1h-3.1zM73 .1h3.1V19H73zm6.2 0h3.1V19h-3.1zM44.9.1H48V19h-3.1zM26 .1h-3.1v18.8h4.4L41.8 4.5V.1L26 15.9V.1zm34.5 3A6.3 6.3 0 0 1 66.7 8h3.2a9.4 9.4 0 1 0 0 3.2h-3.3a6.3 6.3 0 1 1-6-8Z"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-            <!-- spotify  -->
-            <div class="relative px-6 pt-20 bottomtotop z-10">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1FyCb2G1zhBBNQ5lZq1XUi?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <!-- Background Image -->
+            <div class="fixed inset-0 fade">
+                <img class="w-full h-full object-cover" src="/img/tim-m.jpg" alt="Avicii" loading="lazy">
             </div>
-            
-            <!-- image  -->
-            <div class="absolute fade">
-                <img class="fixed pt-10" src="/img/tim-m.jpg" alt="Avicii">
+
+            <!-- Spotify Player - Bottom Centered for Mobile -->
+            <div class="fixed bottom-16 left-4 right-4 z-20 fade2">
+                <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/playlist/1FyCb2G1zhBBNQ5lZq1XUi?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    class="shadow-2xl backdrop-blur-sm bg-black/30"></iframe>
             </div>
         </div>
     </div>
 
     <script src="/script.js"></script>
-
 </body>
 
 </html>
