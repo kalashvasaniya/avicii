@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.hideSeven {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.showSeven {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lefttoright, .righttoleft, .toptobottom, .bottomtotop {
+    animation-duration: 1s;
+  }
+  
+  .fade, .fade2 {
+    animation-duration: 1s;
+  }
+}
+
+/* Hover effects */
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Shadow effects */
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+} 
