@@ -5,25 +5,15 @@ import Image from 'next/image'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
-  const [showContent, setShowContent] = useState(false)
 
   useEffect(() => {
-    // Show loading screen
-    setIsLoading(true)
-    
-    // Hide loading screen after 2.5 seconds
+    // Hide loading screen after 2 seconds
     const loadingTimer = setTimeout(() => {
       setIsLoading(false)
-    }, 2500)
-    
-    // Show main content after loading screen is hidden
-    const contentTimer = setTimeout(() => {
-      setShowContent(true)
-    }, 3000)
+    }, 2000)
 
     return () => {
       clearTimeout(loadingTimer)
-      clearTimeout(contentTimer)
     }
   }, [])
 
@@ -64,7 +54,7 @@ export default function Home() {
       )}
 
       {/* Main Content */}
-      <div className={`hideSeven ${showContent ? '!block opacity-100' : ''}`}>
+      <div className={`${isLoading ? 'hideSeven' : 'showSeven'}`}>
         {/* Desktop View */}
         <div className="hidden md:block">
           {/* Avicii Logo */}
@@ -92,13 +82,16 @@ export default function Home() {
           </div>
 
           {/* Background Image */}
-          <div className="fixed inset-0 fade">
+          <div className="fixed inset-0 fade bg-black">
             <Image 
               src="/img/tim.jpg" 
               alt="Avicii" 
               fill
               className="object-cover"
               priority
+              onError={(e) => {
+                console.error('Failed to load desktop image');
+              }}
             />
           </div>
 
@@ -115,32 +108,13 @@ export default function Home() {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                 loading="lazy"
                 className="shadow-2xl backdrop-blur-sm bg-black/30"
+                onLoad={() => console.log('Desktop Spotify iframe loaded')}
+                onError={() => console.error('Desktop Spotify iframe failed to load')}
               />
             </div>
           </div>
 
-          {/* Personal Logo */}
-          <div className="fixed bottom-8 left-8 z-20 fade2">
-            <a 
-              href="https://kalashvasaniya.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:opacity-80 transition-opacity"
-            >
-              <svg 
-                className="animate-pulse" 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="currentColor" 
-                viewBox="0 0 41 18.9"
-                width="41" 
-                height="19" 
-                aria-hidden="true" 
-                className="text-white"
-              >
-                <path d="M22.1 18.9V0H41L22.1 18.9zM18.9 0v18.9H0L18.9 0z"></path>
-              </svg>
-            </a>
-          </div>
+
         </div>
 
         {/* Mobile View */}
@@ -170,13 +144,16 @@ export default function Home() {
           </div>
 
           {/* Background Image */}
-          <div className="fixed inset-0 fade">
+          <div className="fixed inset-0 fade bg-black">
             <Image 
               src="/img/tim-m.jpg" 
               alt="Avicii" 
               fill
               className="object-cover"
               priority
+              onError={(e) => {
+                console.error('Failed to load mobile image');
+              }}
             />
           </div>
 
@@ -192,6 +169,8 @@ export default function Home() {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
               loading="lazy"
               className="shadow-2xl backdrop-blur-sm bg-black/30"
+              onLoad={() => console.log('Mobile Spotify iframe loaded')}
+              onError={() => console.error('Mobile Spotify iframe failed to load')}
             />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Script from 'next/script'
@@ -6,6 +6,7 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://avicii.kalashvasaniya.com'),
   title: 'Avicii - A Tribute to Tim Bergling',
   description: 'A tribute to Avicii - Tim Bergling, featuring his iconic music and legacy in electronic dance music.',
   keywords: 'Avicii, Tim Bergling, EDM, Electronic Dance Music, DJ, Producer, Music, Tribute, Kalash Vasaniya',
@@ -50,14 +51,15 @@ export const metadata: Metadata = {
     icon: '/img/avicii.jpeg',
     apple: '/img/avicii.jpeg',
   },
-  themeColor: '#000000',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
   alternates: {
     canonical: 'https://avicii.kalashvasaniya.com/',
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#000000',
 }
 
 export default function RootLayout({
